@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing / Local outputs
+_site/
+dist/
+.env
+
+# System junk
+.DS_Store
+Thumbs.db
