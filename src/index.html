@@ -6,17 +6,63 @@ layout: base.html
 
 {% include "values.html" %}
 
-{% include "services.html" %}
+<!-- Popular Services (Already clean and structured) -->
+<div id="services" class="scroll-mt-24">
+  {% include "services.html" %}
+</div>
 
-<!-- Empty dynamic sections to support navigation anchors -->
-<section id="location" class="py-24 bg-white border-t border-gray-100 text-center">
-  <h2 class="text-2xl font-black text-[{{ theme.colors.textDark }}]">Location Mapping Workspace</h2>
+<!-- Location Section (Updated to match structural alignment) -->
+<section id="location" class="scroll-mt-24 py-20 bg-white px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-gray-100 pb-4">
+      <div>
+        <h2 class="text-3xl font-black text-[{{ theme.colors.textDark }}]">Our Location</h2>
+        <p class="text-gray-600 mt-2">Find our training facilities and campus details</p>
+      </div>
+      <a href="https://maps.google.com" target="_blank" class="mt-4 md:mt-0 text-sm font-bold text-[{{ theme.colors.primary }}] hover:underline">Open in Maps &rarr;</a>
+    </div>
+    
+    <!-- Workspace Box Placeholder -->
+    <div class="bg-[{{ theme.colors.bgWarmLight }}] rounded-2xl p-12 text-center border border-amber-100/60 shadow-inner">
+      <p class="text-gray-500 font-medium">Interactive Mapping Workspace Component goes here.</p>
+    </div>
+  </div>
 </section>
 
-<section id="about" class="py-24 bg-[{{ theme.colors.bgWarmLight }}] text-center">
-  <h2 class="text-2xl font-black text-[{{ theme.colors.textDark }}]">About Us Narrative</h2>
+<!-- About Us Section (Updated to match structural alignment) -->
+<section id="about" class="scroll-mt-24 py-20 bg-[{{ theme.colors.bgWarmLight }}] px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-amber-100 pb-4">
+      <div>
+        <h2 class="text-3xl font-black text-[{{ theme.colors.textDark }}]">About Us</h2>
+        <p class="text-gray-600 mt-2">Discover our philosophy and academic mission</p>
+      </div>
+      <a href="#services" class="mt-4 md:mt-0 text-sm font-bold text-[{{ theme.colors.primary }}] hover:underline">Our Programs &rarr;</a>
+    </div>
+    
+    <!-- Narrative Box Placeholder -->
+    <div class="bg-white rounded-2xl p-12 shadow-sm border border-gray-100">
+      <p class="text-gray-600 leading-relaxed max-w-3xl">
+        Academic narrative blocks go here. This layout matches the exact container framework width as the sections above it, ensuring your typography aligns gracefully as parents scroll through the profile.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="py-24 bg-white text-center">
-  <h2 class="text-2xl font-black text-[{{ theme.colors.textDark }}]">Contact Submissions</h2>
+<!-- Contact Us Section (Updated to match structural alignment) -->
+<section id="contact" class="scroll-mt-24 py-20 bg-white px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-gray-100 pb-4">
+      <div>
+        <h2 class="text-3xl font-black text-[{{ theme.colors.textDark }}]">Contacts</h2>
+        <p class="text-gray-600 mt-2">Get in touch to arrange custom tutoring schedules</p>
+      </div>
+      <span class="hidden md:inline text-xs font-bold uppercase tracking-wider text-[{{ theme.colors.secondary }}]">Response within 24 hours</span>
+    </div>
+    
+    <!-- Submission Form Frame Placeholder -->
+    <div class="bg-[{{ theme.colors.bgWarmLight }}] rounded-2xl p-12 text-center border border-amber-100/60 shadow-inner">
+      <p class="text-gray-500 font-medium">Student Registration / Contact Form Workspace goes here.</p>
+    </div>
+  </div>
 </section>
