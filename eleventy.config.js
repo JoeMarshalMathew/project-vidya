@@ -1,8 +1,11 @@
 export default function(eleventyConfig) {
+  // Pass the assets folder straight through to the compiled site
+  eleventyConfig.addPassthroughCopy("src/assets");
+
   return {
     dir: {
-      input: "src",    // Eleventy will read your files here
-      output: "_site"  // Eleventy will compile the final website here
+      input: "src",
+      output: "_site"
     }
   };
 }

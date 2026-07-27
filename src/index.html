@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuition Center</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-    <main class="max-w-4xl mx-auto py-20 px-4 text-center">
-        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl text-blue-600">
-            Welcome to the Tuition Center
-        </h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600">
-            Your educational workspace is online.
-        </p>
-    </main>
-</body>
-</html>
+---
+layout: base.html
+---
+
+{% include "hero.html" %}
+
+{% include "values.html" %}
+
+{% include "services.html" %}
+
+<!-- Empty dynamic sections to support navigation anchors -->
+<section id="location" class="py-24 bg-white border-t border-gray-100 text-center">
+  <h2 class="text-2xl font-black text-[{{ theme.colors.textDark }}]">Location Mapping Workspace</h2>
+</section>
+
+<section id="about" class="py-24 bg-[{{ theme.colors.bgWarmLight }}] text-center">
+  <h2 class="text-2xl font-black text-[{{ theme.colors.textDark }}]">About Us Narrative</h2>
+</section>
+
+<section id="contact" class="py-24 bg-white text-center">
+  <h2 class="text-2xl font-black text-[{{ theme.colors.textDark }}]">Contact Submissions</h2>
+</section>
