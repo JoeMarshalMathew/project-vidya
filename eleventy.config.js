@@ -1,4 +1,9 @@
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+
 export default function(eleventyConfig) {
+  // Add HtmlBasePlugin so pathPrefix is automatically applied to absolute URLs
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // Passthrough assets folder
   eleventyConfig.addPassthroughCopy("src/assets");
 
@@ -12,6 +17,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/site.webmanifest": "site.webmanifest" });
 
   return {
+    pathPrefix: "/NiNisAcademy/", // Matches your GitHub repository name
     dir: {
       input: "src",
       output: "_site"
