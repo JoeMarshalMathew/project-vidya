@@ -1,10 +1,20 @@
 <header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white border-b border-amber-100 shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
     
-    <!-- Left Section: Logo Asset -->
-    <a href="#home" class="flex items-center">
-      <div class="bg-white p-2 rounded-lg shadow-sm">
-        <img src="/assets/logo.png" alt="NiNi's Academy Logo" class="h-12 w-auto object-contain">
+    <!-- Left Section: Clean Logo (Border Removed) + Brand Text -->
+    <a href="#home" class="flex items-center space-x-3 group py-1">
+      <!-- Container without border or shadow -->
+      <div class="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center p-0.5 transition-transform group-hover:scale-105 shrink-0">
+        <img src="/assets/logo.png" alt="NiNi's Academy Logo" class="w-full h-full object-cover rounded-full">
+      </div>
+      
+      <div class="flex flex-col">
+        <span id="brand-title" class="font-extrabold text-lg text-[{{ theme.colors.primary }}] leading-tight transition-colors">
+          NiNi's Academy
+        </span>
+        <span id="brand-subtitle" class="text-[10px] font-bold text-amber-600 tracking-wider uppercase transition-colors">
+          Tuition Center
+        </span>
       </div>
     </a>
 
@@ -21,20 +31,23 @@
 </header>
 
 <script>
-  // Listen for window scrolling to toggle the header's background state
   window.addEventListener('scroll', function() {
     const header = document.getElementById('site-header');
+    const brandTitle = document.getElementById('brand-title');
+    const brandSubtitle = document.getElementById('brand-subtitle');
     const links = document.querySelectorAll('.nav-link');
     
     if (window.scrollY > 20) {
-      // Scrolled down: Apply the darker background and turn text white
       header.style.backgroundColor = "{{ theme.colors.navBgActive }}";
       header.style.borderColor = "rgba(255, 255, 255, 0.1)";
+      brandTitle.style.color = "#ffffff";
+      brandSubtitle.style.color = "#fcd34d";
       links.forEach(link => link.style.color = "#ffffff");
     } else {
-      // At the top: Revert to the clean light background and primary text
       header.style.backgroundColor = "#ffffff";
       header.style.borderColor = "";
+      brandTitle.style.color = "{{ theme.colors.primary }}";
+      brandSubtitle.style.color = "#d97706";
       links.forEach(link => link.style.color = "{{ theme.colors.primary }}");
     }
   });

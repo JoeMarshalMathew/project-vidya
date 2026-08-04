@@ -6,12 +6,12 @@ layout: base.html
 
 {% include "values.html" %}
 
-<!-- Popular Services (Already clean and structured) -->
+<!-- Popular Services -->
 <div id="services" class="scroll-mt-24">
   {% include "services.html" %}
 </div>
 
-<!-- Location Section (Updated to match structural alignment) -->
+<!-- Location Section -->
 <section id="location" class="scroll-mt-24 py-20 bg-white px-6">
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-gray-100 pb-4">
@@ -29,7 +29,7 @@ layout: base.html
   </div>
 </section>
 
-<!-- About Us Section (Updated to match structural alignment) -->
+<!-- About Us Section -->
 <section id="about" class="scroll-mt-24 py-20 bg-[{{ theme.colors.bgWarmLight }}] px-6">
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-amber-100 pb-4">
@@ -49,20 +49,7 @@ layout: base.html
   </div>
 </section>
 
-<!-- Contact Us Section (Updated to match structural alignment) -->
-<section id="contact" class="scroll-mt-24 py-20 bg-white px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-gray-100 pb-4">
-      <div>
-        <h2 class="text-3xl font-black text-[{{ theme.colors.textDark }}]">Contacts</h2>
-        <p class="text-gray-600 mt-2">Get in touch to arrange custom tutoring schedules</p>
-      </div>
-      <span class="hidden md:inline text-xs font-bold uppercase tracking-wider text-[{{ theme.colors.secondary }}]">Response within 24 hours</span>
-    </div>
-    
-    <!-- Submission Form Frame Placeholder -->
-    <div class="bg-[{{ theme.colors.bgWarmLight }}] rounded-2xl p-12 text-center border border-amber-100/60 shadow-inner">
-      <p class="text-gray-500 font-medium">Student Registration / Contact Form Workspace goes here.</p>
-    </div>
-  </div>
-</section>
+<!-- Contact Us Section (Cleaned up include) -->
+<div id="contact" class="scroll-mt-24">
+  {% include "contact.html" %}
+</div>
