@@ -12,5 +12,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Forces the vertical scrollbar to always show, preventing layout shifts when content loads */
+  overflow-y: scroll;
+  /* Ensures smooth rendering */
+  box-sizing: border-box;
 }
