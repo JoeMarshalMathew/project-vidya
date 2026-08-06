@@ -1,56 +1,53 @@
-<header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white border-b border-slate-100 shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<header id="site-header" class="fixed top-0 left-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
     
-    <!-- Left Section: Clean Logo + Brand Text -->
-    <a href="#home" class="flex items-center space-x-3 group py-1">
-      <div class="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center p-0.5 transition-transform group-hover:scale-105 shrink-0">
-        <img src="/assets/logo.png" alt="NiNi's Academy" class="w-full h-full object-cover rounded-full">
+    <!-- Left Section: Circular Logo + Brand Text -->
+    <a href="#home" class="flex items-center space-x-3 group">
+      <!-- Logo Container -->
+      <div class="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-teal-100 bg-slate-50 transition-transform group-hover:scale-105">
+        <img 
+          src="/assets/logo.png" 
+          alt="NiNi's Academy Logo" 
+          class="w-full h-full object-cover rounded-full"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=NA';"
+        />
       </div>
+      
+      <!-- Text Branding -->
       <div class="flex flex-col">
-        <span id="brand-title" class="font-extrabold text-lg text-teal-600 leading-tight transition-colors">
+        <span class="font-black text-lg text-teal-600 leading-tight">
           NiNi's Academy
         </span>
-        <span id="brand-subtitle" class="text-[10px] font-bold text-teal-600 tracking-wider uppercase transition-colors">
+        <span class="text-[10px] font-bold text-teal-600/80 tracking-wider uppercase">
           Tuition Center
         </span>
       </div>
     </a>
 
-    <!-- Right Section: Navigation Links (Teal Text at Top) -->
-    <nav class="hidden md:flex space-x-8">
-      <a href="#home" class="nav-link text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">Home</a>
-      <a href="#services" class="nav-link text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">Services</a>
-      <a href="#location" class="nav-link text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">Location</a>
-      <a href="#about" class="nav-link text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">About Us</a>
-      <a href="#contact" class="nav-link text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">Contacts</a>
-    </nav>
-    
+    <!-- Center/Right Section: Navigation Options (Matched to Image) -->
+    <div class="flex items-center space-x-8">
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#services" class="text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">
+          Programs
+        </a>
+        <a href="#location" class="text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">
+          Location
+        </a>
+        <a href="#about" class="text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">
+          About Us
+        </a>
+        <a href="#contact" class="text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">
+          Contact Us
+        </a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a 
+        href="#contact" 
+        class="px-5 py-2 rounded-xl bg-amber-400 text-slate-900 font-bold text-sm shadow-sm hover:bg-amber-300 active:scale-95 transition-all">
+        Book Free Consult
+      </a>
+    </div>
+
   </div>
 </header>
-
-<script>
-  window.addEventListener('scroll', function() {
-    const header = document.getElementById('site-header');
-    const brandTitle = document.getElementById('brand-title');
-    const brandSubtitle = document.getElementById('brand-subtitle');
-    const links = document.querySelectorAll('.nav-link');
-    
-    const tealColor = "#0d9488"; // Teal Color
-
-    if (window.scrollY > 20) {
-      // SCROLLED STATE: Teal Header + White Text for Everything
-      header.style.backgroundColor = tealColor;
-      header.style.borderColor = "rgba(255, 255, 255, 0.15)";
-      brandTitle.style.color = "#ffffff";
-      brandSubtitle.style.color = "#ffffff";
-      links.forEach(link => link.style.color = "#ffffff");
-    } else {
-      // TOP MOST STATE: White Header + Teal Text for Everything
-      header.style.backgroundColor = "#ffffff";
-      header.style.borderColor = "";
-      brandTitle.style.color = tealColor;
-      brandSubtitle.style.color = tealColor;
-      links.forEach(link => link.style.color = tealColor);
-    }
-  });
-</script>
