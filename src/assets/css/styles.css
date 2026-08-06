@@ -10,3 +10,7 @@
   --color-text-dark: #1A202C;
   --color-bg-warm-light: #F8F9FA;
 }
+
+html {
+  scroll-behavior: smooth;
+}
