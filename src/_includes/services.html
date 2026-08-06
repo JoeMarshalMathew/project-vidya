@@ -1,38 +1,77 @@
-<section id="services" class="py-20 bg-[{{ theme.colors.bgWarmLight }}] px-6">
+<section id="services" class="py-20 bg-slate-50 px-6">
   <div class="max-w-6xl mx-auto">
+    
+    <!-- Section Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
-        <h2 class="text-3xl font-black text-[{{ theme.colors.textDark }}]">Popular Services</h2>
-        <p class="text-gray-600 mt-2">Curated learning courses managed dynamically</p>
+        <h2 class="text-3xl font-black text-slate-900">Popular Services</h2>
+        <p class="text-slate-600 mt-2">Curated learning courses managed dynamically</p>
       </div>
-      <a href="#contact" class="mt-4 md:mt-0 text-sm font-bold text-[{{ theme.colors.primary }}] hover:underline">View All Programs &rarr;</a>
+      <a href="#contact" class="mt-4 md:mt-0 text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">
+        View All Programs &rarr;
+      </a>
     </div>
 
+    <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Block 1 -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-shadow">
-        <div class="h-48 bg-slate-200"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+      
+      <!-- Block 1: Math & Science -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-slate-200">
+          <img 
+            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80" 
+            alt="Math & Science"
+            class="w-full h-full object-cover" 
+          />
+        </div>
         <div class="p-6 text-center">
-          <h4 class="font-bold text-lg text-[{{ theme.colors.textDark }}]">Math & Science</h4>
-          <a href="#contact" class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-[{{ theme.colors.primary }}] bg-[{{ theme.colors.secondary }}]/20 px-4 py-2 rounded-lg hover:bg-[{{ theme.colors.secondary }}]/40">Click Here</a>
+          <h4 class="font-bold text-lg text-slate-900">Math & Science</h4>
+          <a 
+            href="#contact" 
+            class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-white bg-teal-600 px-5 py-2.5 rounded-lg shadow-sm hover:bg-teal-700 transition-colors">
+            Click Here
+          </a>
         </div>
       </div>
-      <!-- Block 2 -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-shadow">
-        <div class="h-48 bg-slate-200"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+
+      <!-- Block 2: Language Arts -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-slate-200">
+          <img 
+            src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80" 
+            alt="Language Arts"
+            class="w-full h-full object-cover" 
+          />
+        </div>
         <div class="p-6 text-center">
-          <h4 class="font-bold text-lg text-[{{ theme.colors.textDark }}]">Language Arts</h4>
-          <a href="#contact" class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-[{{ theme.colors.primary }}] bg-[{{ theme.colors.secondary }}]/20 px-4 py-2 rounded-lg hover:bg-[{{ theme.colors.secondary }}]/40">Click Here</a>
+          <h4 class="font-bold text-lg text-slate-900">Language Arts</h4>
+          <a 
+            href="#contact" 
+            class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-slate-900 bg-amber-400 px-5 py-2.5 rounded-lg shadow-sm hover:bg-amber-500 transition-colors">
+            Click Here
+          </a>
         </div>
       </div>
-      <!-- Block 3 -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-shadow">
-        <div class="h-48 bg-slate-200"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+
+      <!-- Block 3: Test Prep -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-slate-200">
+          <img 
+            src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80" 
+            alt="Test Prep"
+            class="w-full h-full object-cover" 
+          />
+        </div>
         <div class="p-6 text-center">
-          <h4 class="font-bold text-lg text-[{{ theme.colors.textDark }}]">Test Prep</h4>
-          <a href="#contact" class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-[{{ theme.colors.primary }}] bg-[{{ theme.colors.secondary }}]/20 px-4 py-2 rounded-lg hover:bg-[{{ theme.colors.secondary }}]/40">Click Here</a>
+          <h4 class="font-bold text-lg text-slate-900">Test Prep</h4>
+          <a 
+            href="#contact" 
+            class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-slate-900 bg-amber-400 px-5 py-2.5 rounded-lg shadow-sm hover:bg-amber-500 transition-colors">
+            Click Here
+          </a>
         </div>
       </div>
+
     </div>
   </div>
 </section>

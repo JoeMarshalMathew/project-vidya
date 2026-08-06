@@ -1,29 +1,45 @@
-<section id="home" class="scroll-mt-24 relative min-h-[85vh] flex items-center bg-[{{ theme.colors.bgWarmLight }}] px-6 lg:px-16 py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<section class="py-16 bg-bgWarmLight px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     
-    <!-- Left Copy Text Overlay Box -->
-    <div class="lg:col-span-5 bg-[{{ theme.colors.secondary }}]/90 backdrop-blur-sm p-8 lg:p-12 rounded-2xl shadow-xl text-white z-10">
-      <span class="text-xs uppercase font-extrabold tracking-widest text-[{{ theme.colors.primary }}] bg-white/90 px-3 py-1 rounded-full">
-        Tailored learning for every child
-      </span>
-      <h1 class="text-4xl lg:text-5xl font-black mt-6 leading-tight">
-        Elevate Your Learning at NiNi's Academy
-      </h1>
-      <p class="mt-4 text-white/90 font-medium">
-        Expert Tutoring in a Warm, Safe, and Inspiring Environment built directly around your child's specific developmental pace.
-      </p>
-      <div class="mt-8">
-        <a href="#contact" class="inline-block bg-[{{ theme.colors.primary }}] text-white font-bold px-8 py-4 rounded-xl shadow-md hover:bg-slate-900 transition-all transform hover:-translate-y-0.5">
-          Explore Framework
+    <!-- Left Hero Card Container (Now Solid Teal) -->
+    <div class="bg-teal-600 rounded-2xl p-8 sm:p-12 shadow-xl flex flex-col justify-between min-h-[420px] relative text-white">
+      
+      <!-- Card Content Wrapper -->
+      <div class="space-y-4">
+        <!-- Subheading / Badge (Soft Light Teal Accent) -->
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-100">
+          Welcome to NiNi's Academy
+        </span>
+
+        <!-- Main Headline (Pure White) -->
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+          Empowering Students to Reach Their Full Potential
+        </h1>
+
+        <!-- Subtitle / Body Text (Light Tint for Readability) -->
+        <p class="text-slate-100 text-sm sm:text-base leading-relaxed opacity-90">
+          Personalized tuition programs tailored to build confidence, master core concepts, and achieve academic excellence.
+        </p>
+      </div>
+
+      <!-- Action Button Container -->
+      <div class="pt-6">
+        <a 
+          href="#contact" 
+          class="inline-block px-8 py-3 rounded-xl bg-amber-400 text-slate-900 font-bold shadow-md hover:bg-amber-300 active:scale-95 transition-all duration-200">
+          Get Started
         </a>
       </div>
+
     </div>
 
-    <!-- Right Image Component Placeholder -->
-    <div class="lg:col-span-7 relative h-[450px] rounded-2xl overflow-hidden shadow-2xl bg-slate-200 border border-amber-100">
-      <div class="absolute inset-0 bg-gradient-to-tr from-[{{ theme.colors.primary }}]/20 to-transparent mix-blend-multiply z-10"></div>
-      <!-- You can swap this source URL placeholder with any local group study photo asset -->
-      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Learning Environment Classroom" class="w-full h-full object-cover">
+    <!-- Right Image Card -->
+    <div class="overflow-hidden rounded-2xl shadow-xl min-h-[420px] h-full">
+      <img 
+        src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" 
+        alt="Classroom Learning" 
+        class="w-full h-full object-cover rounded-2xl"
+      />
     </div>
 
   </div>

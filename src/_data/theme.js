@@ -1,9 +1,11 @@
+// theme.js
 export default {
   colors: {
-    primary: "#0d5cbe",       // Bright Royal Blue from the text/border
-    secondary: "#f27321",     // Vibrant Warm Orange from the tree/sun
-    textDark: "#1e293b",
-    bgWarmLight: "#fefcf6",   // Warm soft canvas
-    navBgActive: "#0a438c"    // Deep blue when scrolled
+    primary: '#0B2046',       // Deep Navy Blue
+    secondary: '#2EC4C6',     // Bright Cyan Teal
+    accent: '#51B09D',        // Soft Mint Teal
+    highlight: '#F4B55E',     // Soft Amber/Gold
+    textDark: '#1A202C',      // Charcoal/Black
+    bgWarmLight: '#F8F9FA',   // Crisp light off-white
   }
 };

@@ -6,50 +6,16 @@ layout: base.html
 
 {% include "values.html" %}
 
-<!-- Popular Services -->
+<!-- Popular Services Section -->
 <div id="services" class="scroll-mt-24">
   {% include "services.html" %}
 </div>
 
 <!-- Location Section -->
-<section id="location" class="scroll-mt-24 py-20 bg-white px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-gray-100 pb-4">
-      <div>
-        <h2 class="text-3xl font-black text-[{{ theme.colors.textDark }}]">Our Location</h2>
-        <p class="text-gray-600 mt-2">Find our training facilities and campus details</p>
-      </div>
-      <a href="https://maps.google.com" target="_blank" class="mt-4 md:mt-0 text-sm font-bold text-[{{ theme.colors.primary }}] hover:underline">Open in Maps &rarr;</a>
-    </div>
-    
-    <!-- Workspace Box Placeholder -->
-    <div class="bg-[{{ theme.colors.bgWarmLight }}] rounded-2xl p-12 text-center border border-amber-100/60 shadow-inner">
-      <p class="text-gray-500 font-medium">Interactive Mapping Workspace Component goes here.</p>
-    </div>
-  </div>
-</section>
+{% include "location.html" %}
 
 <!-- About Us Section -->
-<section id="about" class="scroll-mt-24 py-20 bg-[{{ theme.colors.bgWarmLight }}] px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-amber-100 pb-4">
-      <div>
-        <h2 class="text-3xl font-black text-[{{ theme.colors.textDark }}]">About Us</h2>
-        <p class="text-gray-600 mt-2">Discover our philosophy and academic mission</p>
-      </div>
-      <a href="#services" class="mt-4 md:mt-0 text-sm font-bold text-[{{ theme.colors.primary }}] hover:underline">Our Programs &rarr;</a>
-    </div>
-    
-    <!-- Narrative Box Placeholder -->
-    <div class="bg-white rounded-2xl p-12 shadow-sm border border-gray-100">
-      <p class="text-gray-600 leading-relaxed max-w-3xl">
-        Academic narrative blocks go here. This layout matches the exact container framework width as the sections above it, ensuring your typography aligns gracefully as parents scroll through the profile.
-      </p>
-    </div>
-  </div>
-</section>
+{% include "about.html" %}
 
-<!-- Contact Us Section (Cleaned up include) -->
-<div id="contact" class="scroll-mt-24">
-  {% include "contact.html" %}
-</div>
+<!-- Contact Us Section -->
+{% include "contact.html" %}

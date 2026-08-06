@@ -12,9 +12,25 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0d9488',   /* Teal */
+          secondary: '#0f766e',
+          highlight: '#f59e0b',
+          bgWarmLight: '#fdfbf7',
+          textDark: '#0f172a',
+        }
+      }
+    }
+  }
+</script>
 </head>
-<body class="bg-{{ theme.colors.bgWarmLight }} text-gray-900 font-sans antialiased pt-20">
+<body class="bg-bgWarmLight text-textDark font-sans antialiased pt-20">
 
   <!-- Include Navbar Component -->
   {% include "navbar.html" %}
