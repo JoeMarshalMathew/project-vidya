@@ -2,76 +2,98 @@
   <div class="max-w-6xl mx-auto">
     
     <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 border-b border-slate-200/80 pb-4">
-      <div>
-        <h2 class="text-3xl font-black text-textDark">Our Programs</h2>
-        <p class="text-slate-600 mt-2">Curated learning courses managed dynamically</p>
+    <div class="mb-6 sm:mb-8 border-b border-slate-200/80 pb-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl font-black text-textDark">Our Programs</h2>
+          <p class="text-slate-600 mt-1">Curated learning courses managed dynamically</p>
+        </div>
+        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-primary hover:opacity-80 transition-opacity whitespace-nowrap">
+          View All Programs &rarr;
+        </a>
       </div>
-      <a href="#contact" class="mt-4 md:mt-0 text-xs font-bold uppercase tracking-wider text-primary hover:opacity-80 transition-opacity">
-        View All Programs &rarr;
-      </a>
     </div>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Wrapper with Relative Positioning -->
+    <div class="relative max-w-sm mx-auto md:max-w-none px-8 sm:px-12 md:px-0">
       
-      <!-- Block 1: Math & Science -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 hover:shadow-xl transition-shadow">
-        <div class="h-48 bg-slate-200">
-          <img 
-            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80" 
-            alt="Math & Science"
-            class="w-full h-full object-cover" 
-          />
-        </div>
-        <div class="p-6 text-center">
-          <h3 class="font-bold text-lg text-textDark">Math & Science</h3>
-          <a 
-            href="#contact" 
-            class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm hover:brightness-95 transition-all">
-            Click Here
-          </a>
-        </div>
-      </div>
+      <!-- Previous Arrow (Hidden on Desktop via md:hidden) -->
+      <button 
+        type="button" 
+        id="slider-prev" 
+        aria-label="Previous slide"
+        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-highlight text-textDark shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+      </button>
 
-      <!-- Block 2: Language Arts -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 hover:shadow-xl transition-shadow">
-        <div class="h-48 bg-slate-200">
-          <img 
-            src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80" 
-            alt="Language Arts"
-            class="w-full h-full object-cover" 
-          />
-        </div>
-        <div class="p-6 text-center">
-          <h3 class="font-bold text-lg text-textDark">Language Arts</h3>
-          <a 
-            href="#contact" 
-            class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm hover:brightness-95 transition-all">
-            Click Here
-          </a>
-        </div>
-      </div>
+      <!-- Next Arrow (Hidden on Desktop via md:hidden) -->
+      <button 
+        type="button" 
+        id="slider-next" 
+        aria-label="Next slide"
+        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-highlight text-textDark shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+      </button>
 
-      <!-- Block 3: Test Prep -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 hover:shadow-xl transition-shadow">
-        <div class="h-48 bg-slate-200">
-          <img 
-            src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80" 
-            alt="Test Prep"
-            class="w-full h-full object-cover" 
-          />
+      <!-- Cards Container -->
+      <div 
+        id="programs-slider" 
+        class="flex md:grid md:grid-cols-3 gap-6 sm:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
+        
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0">
+          <div class="h-48 bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80" alt="Math" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-bold text-lg text-textDark">Math & Science</h3>
+            <a href="#contact" class="inline-block mt-4 text-xs font-extrabold uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm">Click Here</a>
+          </div>
         </div>
-        <div class="p-6 text-center">
-          <h3 class="font-bold text-lg text-textDark">Test Prep</h3>
-          <a 
-            href="#contact" 
-            class="inline-block mt-4 text-xs font-extrabold tracking-wide uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm hover:brightness-95 transition-all">
-            Click Here
-          </a>
-        </div>
-      </div>
 
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0">
+          <div class="h-48 bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80" alt="Language" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-bold text-lg text-textDark">Language Arts</h3>
+            <a href="#contact" class="inline-block mt-4 text-xs font-extrabold uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm">Click Here</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0">
+          <div class="h-48 bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80" alt="Test" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="font-bold text-lg text-textDark">Test Prep</h3>
+            <a href="#contact" class="inline-block mt-4 text-xs font-extrabold uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm">Click Here</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('programs-slider');
+    const prevBtn = document.getElementById('slider-prev');
+    const nextBtn = document.getElementById('slider-next');
+
+    if (slider && prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        const cardWidth = slider.querySelector(':scope > div').clientWidth;
+        slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const cardWidth = slider.querySelector(':scope > div').clientWidth;
+        slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
