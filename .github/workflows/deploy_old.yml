@@ -1,8 +1,8 @@
-name: Deploy Eleventy to GitHub Pages
+name: Deploy Eleventy to GitHub Pages Old
 
 on:
   # push:
-  #   branches: ["main"]
+  #  branches: ["main"]
 
   workflow_dispatch:
 
@@ -11,7 +11,7 @@ permissions:
   pages: write
   id-token: write
 
-# Cancel old in-progress workflow runs when a new trigger occurs
+# Cancel old in-progress workflow runs when a new push occurs
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -46,6 +46,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    # Ensure sequential deployment to GitHub Pages API
     concurrency:
       group: "pages-deploy"
       cancel-in-progress: true
