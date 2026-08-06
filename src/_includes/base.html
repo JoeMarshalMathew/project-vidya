@@ -6,31 +6,30 @@
   <title>NiNi's Academy - Tailored Learning</title>
 
   <!-- Favicon Links -->
-  <!-- Main Favicon for Browser Tabs -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Include Tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#0d9488',   /* Teal */
-          secondary: '#0f766e',
-          highlight: '#f59e0b',
-          bgWarmLight: '#fdfbf7',
-          textDark: '#0f172a',
+  <!-- Include Tailwind CDN with Updated Theme Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0b1a38',    /* Dark Blue (blue-950) */
+            secondary: '#1e3a8a',  /* Medium Dark Blue (blue-900) */
+            highlight: '#f59e0b',  /* Amber Gold */
+            bgWarmLight: '#fdfbf7',
+            textDark: '#0f172a',
+          }
         }
       }
     }
-  }
-</script>
+  </script>
 </head>
-<body class="bg-bgWarmLight text-textDark font-sans antialiased pt-20">
+<body class="bg-bgWarmLight text-textDark font-sans antialiased pt-16">
 
   <!-- Include Navbar Component -->
   {% include "navbar.html" %}
@@ -40,7 +39,8 @@
     {{ content }}
   </main>
 
-  <footer class="bg-white border-t border-amber-100 py-8 text-center text-sm text-[{{ theme.colors.primary }}]">
+  <!-- Footer aligned to Dark Blue theme -->
+  <footer class="bg-white border-t border-slate-200 py-8 text-center text-sm text-blue-950 font-medium">
     &copy; 2026 NiNi's Academy. All rights reserved.
   </footer>
 
