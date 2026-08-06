@@ -1,24 +1,24 @@
 <header id="site-header" class="fixed top-0 left-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-24 flex items-center justify-between">
     
     <!-- Left Section: Circular Logo + Brand Text -->
-    <a href="#home" class="flex items-center space-x-2.5 sm:space-x-3 group">
-      <!-- Logo Container -->
-      <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-slate-200 bg-slate-50 transition-transform group-hover:scale-105">
+    <a href="#home" class="flex items-center space-x-4 group">
+      <!-- Logo Container: Forced large size (w-16 h-16) -->
+      <div class="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0 border-2 border-slate-200 bg-slate-50 transition-transform group-hover:scale-105">
         <img 
           src="/assets/logo.png" 
           alt="NiNi's Academy Logo" 
           class="w-full h-full object-cover rounded-full"
-          onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=NA';"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/64?text=NA';"
         />
       </div>
       
-      <!-- Text Branding -->
+      <!-- Text Branding: Forced large text sizes (text-2xl & text-sm) -->
       <div class="flex flex-col">
-        <span class="font-black text-sm sm:text-lg text-primary leading-tight">
+        <span class="font-black text-2xl text-primary leading-tight">
           NiNi's Academy
         </span>
-        <span class="text-[9px] sm:text-[10px] font-bold text-primary/80 tracking-wider uppercase">
+        <span class="text-xs font-bold text-primary/80 tracking-widest uppercase mt-0.5">
           Tuition Center
         </span>
       </div>
@@ -27,16 +27,16 @@
     <!-- Center/Right Section: Desktop Navigation Links & CTA -->
     <div class="flex items-center space-x-4 sm:space-x-8">
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="#services" class="text-sm font-bold text-primary hover:opacity-80 transition-opacity">
+        <a href="#services" class="text-base font-bold text-primary hover:opacity-80 transition-opacity">
           Programs
         </a>
-        <a href="#location" class="text-sm font-bold text-primary hover:opacity-80 transition-opacity">
+        <a href="#location" class="text-base font-bold text-primary hover:opacity-80 transition-opacity">
           Location
         </a>
-        <a href="#about" class="text-sm font-bold text-primary hover:opacity-80 transition-opacity">
+        <a href="#about" class="text-base font-bold text-primary hover:opacity-80 transition-opacity">
           About Us
         </a>
-        <a href="#contact" class="text-sm font-bold text-primary hover:opacity-80 transition-opacity">
+        <a href="#contact" class="text-base font-bold text-primary hover:opacity-80 transition-opacity">
           Contact Us
         </a>
       </nav>
@@ -44,7 +44,7 @@
       <!-- Desktop CTA Button -->
       <a 
         href="#consultation-form" 
-        class="hidden sm:inline-block px-5 py-2 rounded-xl bg-highlight text-textDark font-bold text-sm shadow-sm hover:brightness-95 active:scale-95 transition-all whitespace-nowrap">
+        class="hidden sm:inline-block px-5 py-2.5 rounded-xl bg-highlight text-textDark font-bold text-base shadow-sm hover:brightness-95 active:scale-95 transition-all whitespace-nowrap">
         Get a Free Consultation
       </a>
 
@@ -53,11 +53,11 @@
         id="menu-btn" 
         type="button" 
         aria-label="Toggle Navigation Menu"
-        class="md:hidden p-2 rounded-lg text-primary hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary/20">
-        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        class="md:hidden p-3 rounded-xl text-primary bg-slate-50 border border-slate-200 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary/20">
+        <svg id="menu-icon-open" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
-        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg id="menu-icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
@@ -66,25 +66,25 @@
   </div>
 
   <!-- Mobile Dropdown Menu Drawer -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 shadow-xl px-6 pt-4 pb-6 space-y-4 absolute top-16 left-0 w-full transition-all">
-    <nav class="flex flex-col space-y-3">
-      <a href="#services" class="mobile-link text-base font-bold text-primary hover:text-highlight py-1.5 transition-colors">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 shadow-xl px-6 pt-5 pb-7 space-y-4 absolute top-24 left-0 w-full transition-all">
+    <nav class="flex flex-col space-y-4">
+      <a href="#services" class="mobile-link text-xl font-bold text-primary hover:text-highlight py-1.5 transition-colors">
         Programs
       </a>
-      <a href="#location" class="mobile-link text-base font-bold text-primary hover:text-highlight py-1.5 transition-colors">
+      <a href="#location" class="mobile-link text-xl font-bold text-primary hover:text-highlight py-1.5 transition-colors">
         Location
       </a>
-      <a href="#about" class="mobile-link text-base font-bold text-primary hover:text-highlight py-1.5 transition-colors">
+      <a href="#about" class="mobile-link text-xl font-bold text-primary hover:text-highlight py-1.5 transition-colors">
         About Us
       </a>
-      <a href="#contact" class="mobile-link text-base font-bold text-primary hover:text-highlight py-1.5 transition-colors">
+      <a href="#contact" class="mobile-link text-xl font-bold text-primary hover:text-highlight py-1.5 transition-colors">
         Contact Us
       </a>
     </nav>
-    <div class="pt-2 border-t border-slate-100">
+    <div class="pt-3 border-t border-slate-100">
       <a 
         href="#consultation-form" 
-        class="mobile-link block text-center w-full px-4 py-2.5 rounded-xl bg-highlight text-textDark font-bold text-sm shadow-sm hover:brightness-95 transition-all">
+        class="mobile-link block text-center w-full px-5 py-3.5 rounded-xl bg-highlight text-textDark font-bold text-lg shadow-sm hover:brightness-95 transition-all">
         Get a Free Consultation
       </a>
     </div>
@@ -109,7 +109,6 @@
 
       menuBtn.addEventListener('click', toggleMenu);
 
-      // Automatically close menu when a navigation item is tapped
       mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
