@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 async function updateReviews() {
-  const placeId = "ChIJrekd-z0d1moRNbJQBGg0GNE";
+  const placeId = process.env.GOOGLE_PLACES_API_PLACE_ID;
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
 
   if (!apiKey) {
