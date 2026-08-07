@@ -24,7 +24,7 @@
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-100">
         <div>
           <h3 class="font-bold text-lg text-slate-900">Overall Rating</h3>
-          <p class="text-xs text-slate-500 mt-0.5" id="total-reviews-text">Based on 13 verified Google reviews</p>
+          <p class="text-xs text-slate-500 mt-0.5" id="total-reviews-text">Loading reviews data...</p>
         </div>
         <div class="flex items-center gap-2">
           <span id="avg-rating" class="text-3xl font-black text-primary">5.0</span>
@@ -110,10 +110,29 @@
   </div>
 </section>
 
-<!-- Carousel Interaction Script -->
+<!-- Carousel Interaction & Stats Fetch Script -->
 <script>
   let currentReviewSlide = 0;
   const totalReviewSlides = 4;
+  let autoPlayInterval = null;
+
+  async function loadReviewStats() {
+    try {
+      const response = await fetch('public/reviews.json');
+      const data = await response.json();
+
+      // Update header stats dynamically from public/reviews.json
+      if (data.averageRating) {
+        document.getElementById('avg-rating').textContent = Number(data.averageRating).toFixed(1);
+      }
+      if (data.totalReviews) {
+        document.getElementById('total-reviews-text').textContent = `Based on ${data.totalReviews} verified Google reviews`;
+      }
+    } catch (error) {
+      console.error("Failed to load reviews.json stats:", error);
+      document.getElementById('total-reviews-text').textContent = "Based on 13 verified Google reviews";
+    }
+  }
 
   function updateCarousel() {
     const track = document.getElementById('review-carousel-track');
@@ -135,20 +154,36 @@
   function nextReviewSlide() {
     currentReviewSlide = (currentReviewSlide + 1) % totalReviewSlides;
     updateCarousel();
+    resetAutoPlay();
   }
 
   function prevReviewSlide() {
     currentReviewSlide = (currentReviewSlide - 1 + totalReviewSlides) % totalReviewSlides;
     updateCarousel();
+    resetAutoPlay();
   }
 
   function goToSlide(index) {
     currentReviewSlide = index;
     updateCarousel();
+    resetAutoPlay();
   }
 
-  // Optional: Auto-play every 6 seconds
-  setInterval(() => {
-    nextReviewSlide();
-  }, 6000);
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+      currentReviewSlide = (currentReviewSlide + 1) % totalReviewSlides;
+      updateCarousel();
+    }, 6000);
+  }
+
+  function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+  }
+
+  // Initialize stats fetch from public folder and autoplay on DOM load
+  document.addEventListener("DOMContentLoaded", () => {
+    loadReviewStats();
+    startAutoPlay();
+  });
 </script>

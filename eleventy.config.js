@@ -6,6 +6,7 @@ export default function(eleventyConfig) {
 
   // Passthrough assets folder
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("public");
 
   // Passthrough favicons and manifest
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
