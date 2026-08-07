@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path'; // if needed
 
 async function updateReviews() {
   const placeId = process.env.GOOGLE_PLACES_API_PLACE_ID;
