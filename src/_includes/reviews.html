@@ -1,0 +1,154 @@
+<section id="reviews" class="scroll-mt-20 py-6 sm:py-8 bg-bgWarmLight px-6">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 border-b border-slate-200/80 pb-4">
+      <div>
+        <h2 class="text-3xl font-black text-textDark">Google Reviews</h2>
+        <p class="text-slate-600 mt-2">See what our students and parents say about us</p>
+      </div>
+      <!-- Action Link using custom primary color utility -->
+      <a 
+        href="https://www.google.com/maps/search/?api=1&query=21+Stable+Street,+Pakenham+3810+Victoria,+Australia" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="mt-4 md:mt-0 text-xs font-bold uppercase tracking-wider text-primary hover:opacity-80 transition-opacity">
+        View All Reviews &rarr;
+      </a>
+    </div>
+    
+    <!-- Reviews Container -->
+    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
+      
+      <!-- Aggregated Header Stats -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-100">
+        <div>
+          <h3 class="font-bold text-lg text-slate-900">Overall Rating</h3>
+          <p class="text-xs text-slate-500 mt-0.5" id="total-reviews-text">Based on 13 verified Google reviews</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="avg-rating" class="text-3xl font-black text-primary">5.0</span>
+          <div class="text-yellow-500 text-lg tracking-tighter">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Carousel Wrapper -->
+      <div class="relative overflow-hidden">
+        
+        <!-- Slides Track -->
+        <div id="review-carousel-track" class="flex transition-transform duration-500 ease-in-out">
+          
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0 px-1">
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-sm text-slate-900">Priya S.</span>
+                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
+              </div>
+              <p class="text-sm text-slate-600 italic leading-relaxed">"Amazing teaching environment and wonderful support. Highly recommended for anyone looking for quality academic guidance!"</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="w-full flex-shrink-0 px-1">
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-sm text-slate-900">David M.</span>
+                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
+              </div>
+              <p class="text-sm text-slate-600 italic leading-relaxed">"The instructors are deeply knowledgeable and truly care about the students' progress. Fantastic structure and results."</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="w-full flex-shrink-0 px-1">
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-sm text-slate-900">Ananya K.</span>
+                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
+              </div>
+              <p class="text-sm text-slate-600 italic leading-relaxed">"A very professional and welcoming space. My child's confidence has grown significantly since joining."</p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="w-full flex-shrink-0 px-1">
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-sm text-slate-900">Jason W.</span>
+                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
+              </div>
+              <p class="text-sm text-slate-600 italic leading-relaxed">"Top-tier facilities and curriculum. Couldn't have asked for a better local academy experience."</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <div class="flex items-center justify-between mt-6">
+          <button onclick="prevReviewSlide()" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors focus:outline-none flex items-center gap-1 text-xs font-bold uppercase tracking-wider">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg> Prev
+          </button>
+          
+          <!-- Dots Indicator -->
+          <div class="flex gap-2" id="carousel-dots">
+            <button onclick="goToSlide(0)" class="w-2.5 h-2.5 rounded-full bg-primary transition-all"></button>
+            <button onclick="goToSlide(1)" class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"></button>
+            <button onclick="goToSlide(2)" class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"></button>
+            <button onclick="goToSlide(3)" class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"></button>
+          </div>
+
+          <button onclick="nextReviewSlide()" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors focus:outline-none flex items-center gap-1 text-xs font-bold uppercase tracking-wider">
+            Next <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Carousel Interaction Script -->
+<script>
+  let currentReviewSlide = 0;
+  const totalReviewSlides = 4;
+
+  function updateCarousel() {
+    const track = document.getElementById('review-carousel-track');
+    track.style.transform = `translateX(-${currentReviewSlide * 100}%)`;
+
+    // Update dots styling
+    const dots = document.getElementById('carousel-dots').children;
+    for (let i = 0; i < dots.length; i++) {
+      if (i === currentReviewSlide) {
+        dots[i].classList.remove('bg-slate-300');
+        dots[i].classList.add('bg-primary');
+      } else {
+        dots[i].classList.remove('bg-primary');
+        dots[i].classList.add('bg-slate-300');
+      }
+    }
+  }
+
+  function nextReviewSlide() {
+    currentReviewSlide = (currentReviewSlide + 1) % totalReviewSlides;
+    updateCarousel();
+  }
+
+  function prevReviewSlide() {
+    currentReviewSlide = (currentReviewSlide - 1 + totalReviewSlides) % totalReviewSlides;
+    updateCarousel();
+  }
+
+  function goToSlide(index) {
+    currentReviewSlide = index;
+    updateCarousel();
+  }
+
+  // Optional: Auto-play every 6 seconds
+  setInterval(() => {
+    nextReviewSlide();
+  }, 6000);
+</script>
