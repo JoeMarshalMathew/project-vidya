@@ -14,6 +14,15 @@ async function updateReviews() {
     process.exit(1);
   }
 
+  // Load fallback reviews safely from the root-level data/ folder
+  let fallbackReviews = [];
+  try {
+    const fallbackPath = path.join(__dirname, '../data/fallback-reviews.json');
+    fallbackReviews = JSON.parse(fs.readFileSync(fallbackPath, 'utf8'));
+  } catch (err) {
+    console.warn("Could not load fallback reviews file, defaulting to empty array.");
+  }
+
   try {
     const response = await fetch(`https://places.googleapis.com/v1/places/${placeId}`, {
       method: 'GET',
@@ -26,33 +35,12 @@ async function updateReviews() {
 
     const data = await response.json();
 
-    // Compile into clean JSON structure
+    // Compile into clean JSON structure using the external file data for topReviews
     const output = {
       averageRating: data.rating || 5.0,
       totalReviews: data.userRatingCount || 16,
       lastUpdated: new Date().toISOString(),
-      topReviews: [
-        {
-          author_name: "11 Priya S.",
-          rating: 5,
-          text: "Amazing teaching environment and wonderful support. Highly recommended for anyone looking for quality academic guidance!"
-        },
-        {
-          author_name: "11 David M.",
-          rating: 5,
-          text: "The instructors are deeply knowledgeable and truly care about the students' progress. Fantastic structure and results."
-        },
-        {
-          author_name: "11 Ananya K.",
-          rating: 5,
-          text: "A very professional and welcoming space. My child's confidence has grown significantly since joining."
-        },
-        {
-          author_name: "11 Jason W.",
-          rating: 5,
-          text: "Top-tier facilities and curriculum. Couldn't have asked for a better local academy experience."
-        }
-      ]
+      topReviews: fallbackReviews
     };
 
     // Output path pointing to your public folder

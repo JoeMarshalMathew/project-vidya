@@ -35,53 +35,9 @@
       <!-- Carousel Wrapper -->
       <div class="relative overflow-hidden">
         
-        <!-- Slides Track -->
+        <!-- Slides Track (Populated Dynamically) -->
         <div id="review-carousel-track" class="flex transition-transform duration-500 ease-in-out">
-          
-          <!-- Slide 1 -->
-          <div class="w-full flex-shrink-0 px-1">
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-bold text-sm text-slate-900">Priya S.</span>
-                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
-              </div>
-              <p class="text-sm text-slate-600 italic leading-relaxed">"Amazing teaching environment and wonderful support. Highly recommended for anyone looking for quality academic guidance!"</p>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="w-full flex-shrink-0 px-1">
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-bold text-sm text-slate-900">David M.</span>
-                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
-              </div>
-              <p class="text-sm text-slate-600 italic leading-relaxed">"The instructors are deeply knowledgeable and truly care about the students' progress. Fantastic structure and results."</p>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="w-full flex-shrink-0 px-1">
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-bold text-sm text-slate-900">Ananya K.</span>
-                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
-              </div>
-              <p class="text-sm text-slate-600 italic leading-relaxed">"A very professional and welcoming space. My child's confidence has grown significantly since joining."</p>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="w-full flex-shrink-0 px-1">
-            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-bold text-sm text-slate-900">Jason W.</span>
-                <span class="text-yellow-500 text-xs tracking-tighter">★★★★★</span>
-              </div>
-              <p class="text-sm text-slate-600 italic leading-relaxed">"Top-tier facilities and curriculum. Couldn't have asked for a better local academy experience."</p>
-            </div>
-          </div>
-
+          <div class="w-full flex-shrink-0 px-1 text-center py-8 text-slate-400 text-sm">Loading reviews...</div>
         </div>
 
         <!-- Carousel Navigation Controls -->
@@ -90,13 +46,8 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg> Prev
           </button>
           
-          <!-- Dots Indicator -->
-          <div class="flex gap-2" id="carousel-dots">
-            <button onclick="goToSlide(0)" class="w-2.5 h-2.5 rounded-full bg-primary transition-all"></button>
-            <button onclick="goToSlide(1)" class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"></button>
-            <button onclick="goToSlide(2)" class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"></button>
-            <button onclick="goToSlide(3)" class="w-2.5 h-2.5 rounded-full bg-slate-300 transition-all"></button>
-          </div>
+          <!-- Dots Indicator (Populated Dynamically) -->
+          <div class="flex gap-2" id="carousel-dots"></div>
 
           <button onclick="nextReviewSlide()" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors focus:outline-none flex items-center gap-1 text-xs font-bold uppercase tracking-wider">
             Next <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -113,28 +64,63 @@
 <!-- Carousel Interaction & Stats Fetch Script -->
 <script>
   let currentReviewSlide = 0;
-  const totalReviewSlides = 4;
+  let totalReviewSlides = 0;
   let autoPlayInterval = null;
 
-  async function loadReviewStats() {
+  async function loadReviewData() {
     try {
       const response = await fetch('public/reviews.json');
       const data = await response.json();
 
-      // Update header stats dynamically from public/reviews.json
+      // 1. Update header rating stats
       if (data.averageRating) {
         document.getElementById('avg-rating').textContent = Number(data.averageRating).toFixed(1);
       }
       if (data.totalReviews) {
         document.getElementById('total-reviews-text').textContent = `Based on ${data.totalReviews} verified Google reviews`;
       }
+
+      // 2. Populate Carousel Slides dynamically if reviews array exists
+      if (data.topReviews && Array.isArray(data.topReviews) && data.topReviews.length > 0) {
+        totalReviewSlides = data.topReviews.length;
+        const track = document.getElementById('review-carousel-track');
+        const dotsContainer = document.getElementById('carousel-dots');
+        
+        track.innerHTML = '';
+        dotsContainer.innerHTML = '';
+
+        data.topReviews.forEach((review, index) => {
+          // Build slide HTML
+          const slideDiv = document.createElement('div');
+          slideDiv.className = 'w-full flex-shrink-0 px-1';
+          slideDiv.innerHTML = `
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 h-full flex flex-col justify-between">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-sm text-slate-900">${review.author_name || 'Anonymous'}</span>
+                <span class="text-yellow-500 text-xs tracking-tighter">${'★'.repeat(review.rating || 5)}</span>
+              </div>
+              <p class="text-sm text-slate-600 italic leading-relaxed">"${review.text || ''}"</p>
+            </div>
+          `;
+          track.appendChild(slideDiv);
+
+          // Build dot indicator HTML
+          const dotBtn = document.createElement('button');
+          dotBtn.onclick = () => goToSlide(index);
+          dotBtn.className = `w-2.5 h-2.5 rounded-full transition-all ${index === 0 ? 'bg-primary' : 'bg-slate-300'}`;
+          dotsContainer.appendChild(dotBtn);
+        });
+
+        startAutoPlay();
+      }
     } catch (error) {
-      console.error("Failed to load reviews.json stats:", error);
+      console.error("Failed to load reviews.json data:", error);
       document.getElementById('total-reviews-text').textContent = "Based on 13 verified Google reviews";
     }
   }
 
   function updateCarousel() {
+    if (totalReviewSlides === 0) return;
     const track = document.getElementById('review-carousel-track');
     track.style.transform = `translateX(-${currentReviewSlide * 100}%)`;
 
@@ -152,27 +138,33 @@
   }
 
   function nextReviewSlide() {
+    if (totalReviewSlides === 0) return;
     currentReviewSlide = (currentReviewSlide + 1) % totalReviewSlides;
     updateCarousel();
     resetAutoPlay();
   }
 
   function prevReviewSlide() {
+    if (totalReviewSlides === 0) return;
     currentReviewSlide = (currentReviewSlide - 1 + totalReviewSlides) % totalReviewSlides;
     updateCarousel();
     resetAutoPlay();
   }
 
   function goToSlide(index) {
+    if (totalReviewSlides === 0) return;
     currentReviewSlide = index;
     updateCarousel();
     resetAutoPlay();
   }
 
   function startAutoPlay() {
+    if (autoPlayInterval) clearInterval(autoPlayInterval);
     autoPlayInterval = setInterval(() => {
-      currentReviewSlide = (currentReviewSlide + 1) % totalReviewSlides;
-      updateCarousel();
+      if (totalReviewSlides > 0) {
+        currentReviewSlide = (currentReviewSlide + 1) % totalReviewSlides;
+        updateCarousel();
+      }
     }, 6000);
   }
 
@@ -181,9 +173,8 @@
     startAutoPlay();
   }
 
-  // Initialize stats fetch from public folder and autoplay on DOM load
+  // Initialize fetch on DOM load
   document.addEventListener("DOMContentLoaded", () => {
-    loadReviewStats();
-    startAutoPlay();
+    loadReviewData();
   });
 </script>
