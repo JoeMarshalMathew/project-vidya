@@ -29,7 +29,7 @@ async function updateReviews() {
     // Compile into clean JSON structure
     const output = {
       averageRating: data.rating || 5.0,
-      totalReviews: data.userRatingCount || 13,
+      totalReviews: data.userRatingCount || 16,
       lastUpdated: new Date().toISOString(),
       topReviews: [
         {
