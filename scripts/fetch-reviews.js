@@ -1,5 +1,8 @@
-import fs from 'fs';
-import path from 'path'; // if needed
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function updateReviews() {
   const placeId = process.env.GOOGLE_PLACES_API_PLACE_ID;
