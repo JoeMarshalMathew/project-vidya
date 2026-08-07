@@ -23,6 +23,7 @@ jobs:
       - name: Run Fetch Script
         env:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACES_API_PLACE_ID: ${{ secrets.GOOGLE_PLACES_API_PLACE_ID }}
         run: node scripts/fetch-reviews.js
 
       - name: Commit and push if reviews changed
