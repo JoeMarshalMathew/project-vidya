@@ -17,12 +17,13 @@
       </a>
     </div>
     
-    <!-- Interactive Google Map Embed -->
-    <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
-      <div class="w-full h-96 sm:h-[450px]">
+    <!-- Interactive Map & Custom Marker Container -->
+    <div class="relative bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
+      <div class="w-full h-96 sm:h-[450px] relative">
+        <!-- Clean iframe map embed with query centered on the exact address, omitting embedded marker parameters -->
         <iframe 
           title="NiNi's Academy Location Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d145.4851!3d-38.0772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6dd63f0000000001%3A0x0!2s21%20Stable%20St%2C%20Pakenham%20VIC%203810%2C%20Australia!5e0!3m2!1sen!2sau!4v1650000000000!5m2!1sen!2sau" 
+          src="https://www.google.com/maps?q=21+Stable+St,+Pakenham+VIC+3810,+Australia&output=embed" 
           width="100%" 
           height="100%" 
           style="border:0;" 
@@ -31,8 +32,56 @@
           referrerpolicy="no-referrer-when-downgrade"
           class="w-full h-full grayscale-[20%] contrast-[105%]"
         ></iframe>
+
+        <!-- Custom Persistent Red Pin & Toggleable Address Card Overlay -->
+        <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+          <div class="relative pointer-events-auto cursor-pointer group flex flex-col items-center" id="mapPinToggle">
+            
+            <!-- Address Popup Card (Shown/Hidden on Click) -->
+            <div id="mapAddressCard" class="hidden mb-3 bg-white text-textDark px-4 py-3 rounded-xl shadow-xl border border-slate-200 text-xs sm:text-sm font-medium whitespace-nowrap transition-all animate-fade-in relative z-20">
+              <div class="font-bold text-primary mb-0.5">NiNi's Academy</div>
+              <div>21 Stable Street, Pakenham 3810</div>
+              <div>Victoria, Australia</div>
+              <!-- Tooltip Arrow -->
+              <div class="absolute left-1/2 -bottom-1.5 -translate-x-1/2 w-3 h-3 bg-white border-r border-b border-slate-200 rotate-45"></div>
+            </div>
+
+            <!-- Always Visible Red Pointer Pin -->
+            <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform animate-bounce">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            
+            <!-- Pulse ring effect under pin -->
+            <span class="absolute -bottom-1 w-4 h-1.5 bg-black/30 rounded-full blur-[1px]"></span>
+          </div>
+        </div>
+
       </div>
     </div>
 
   </div>
 </section>
+
+<!-- Script to handle clicking the pointer to show/hide the address box -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const pinToggle = document.getElementById('mapPinToggle');
+    const addressCard = document.getElementById('mapAddressCard');
+
+    if (pinToggle && addressCard) {
+      pinToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        addressCard.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!pinToggle.contains(e.target)) {
+          addressCard.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>
