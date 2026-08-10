@@ -1,0 +1,8 @@
+Important Considerations for GitHub Pages
+Search Engine Crawling: Because the site is currently hosted on a GitHub subpath (joemarshalmathew.github.io/project-vidya/), search engines like Google treat it as a subfolder. It can take a little longer to naturally discover compared to a root custom domain, but Googlebot will read your sitemap.xml if you submit it to Google Search Console.
+
+The Custom Domain Transition: When you move to your final custom domain later on, remember to update two main places:
+
+The url property inside your JSON-LD schema in base.html.
+
+Your sitemap URL structure (and potentially remove the /project-vidya/ subpath segment if it moves to the root domain).
