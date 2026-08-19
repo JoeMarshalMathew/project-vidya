@@ -1,15 +1,15 @@
-<section id="services" class="scroll-mt-20 py-6 sm:py-8 bg-bgWarmLight px-6">
+<section id="services" class="scroll-mt-20 py-10 sm:py-14 bg-bgWarmLight px-6">
   <div class="max-w-6xl mx-auto">
     
     <!-- Section Header -->
-    <div class="mb-6 sm:mb-8 border-b border-slate-200/80 pb-4">
+    <div class="mb-8 sm:mb-12 border-b border-slate-200/80 pb-4">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h2 class="text-3xl font-black text-textDark">Our Programs</h2>
-          <p class="text-slate-600 mt-1">Curated learning courses managed dynamically</p>
+          <p class="text-slate-600 mt-1">Structured, curriculum-aligned academic support from Prep to Year 12</p>
         </div>
         <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-primary hover:opacity-80 transition-opacity whitespace-nowrap">
-          View All Programs &rarr;
+          Enquire Now &rarr;
         </a>
       </div>
     </div>
@@ -17,7 +17,7 @@
     <!-- Wrapper with Relative Positioning -->
     <div class="relative max-w-sm mx-auto md:max-w-none px-8 sm:px-12 md:px-0">
       
-      <!-- Previous Arrow (Hidden on Desktop via md:hidden) -->
+      <!-- Previous Arrow (Mobile Only) -->
       <button 
         type="button" 
         id="slider-prev" 
@@ -26,7 +26,7 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
       </button>
 
-      <!-- Next Arrow (Hidden on Desktop via md:hidden) -->
+      <!-- Next Arrow (Mobile Only) -->
       <button 
         type="button" 
         id="slider-next" 
@@ -35,46 +35,105 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
       </button>
 
-      <!-- Cards Container -->
+      <!-- Cards Container (4-column grid on desktop) -->
       <div 
         id="programs-slider" 
-        class="flex md:grid md:grid-cols-3 gap-6 sm:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
+        class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
         
-        <!-- Card 1 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0">
-          <div class="h-48 bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80" alt="Math" class="w-full h-full object-cover" />
+        <!-- Card 1: Prep – Year 6 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
+            <span class="text-4xl mb-2">📚</span>
+            <div class="font-bold text-lg text-textDark">Prep – Year 6</div>
           </div>
-          <div class="p-6 text-center">
-            <h3 class="font-bold text-lg text-textDark">Math & Science</h3>
-            <a href="#contact" class="inline-block mt-4 text-xs font-extrabold uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm">Click Here</a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0">
-          <div class="h-48 bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80" alt="Language" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="font-bold text-lg text-textDark">Language Arts</h3>
-            <a href="#contact" class="inline-block mt-4 text-xs font-extrabold uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm">Click Here</a>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+              <li class="flex items-center gap-2">✓ English & Literacy</li>
+              <li class="flex items-center gap-2">✓ Mathematics & Numeracy</li>
+              <li class="flex items-center gap-2">✓ Science</li>
+              <li class="flex items-center gap-2">✓ Homework & Learning Support</li>
+              <li class="flex items-center gap-2">✓ Foundational Skills</li>
+              <li class="flex items-center gap-2">✓ Confidence & Study Skills</li>
+            </ul>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-textDark bg-highlight py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0">
-          <div class="h-48 bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80" alt="Test" class="w-full h-full object-cover" />
+        <!-- Card 2: Year 7 – Year 10 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
+            <span class="text-4xl mb-2">📐</span>
+            <div class="font-bold text-lg text-textDark">Year 7 – Year 10</div>
           </div>
-          <div class="p-6 text-center">
-            <h3 class="font-bold text-lg text-textDark">Test Prep</h3>
-            <a href="#contact" class="inline-block mt-4 text-xs font-extrabold uppercase text-textDark bg-highlight px-5 py-2.5 rounded-lg shadow-sm">Click Here</a>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+              <li class="flex items-center gap-2">✓ Mathematics</li>
+              <li class="flex items-center gap-2">✓ Science</li>
+              <li class="flex items-center gap-2">✓ English</li>
+              <li class="flex items-center gap-2">✓ Homework & Academic Support</li>
+              <li class="flex items-center gap-2">✓ Exam Preparation</li>
+              <li class="flex items-center gap-2">✓ Exam-Style Practice</li>
+              <li class="flex items-center gap-2">✓ Study & Learning Strategies</li>
+            </ul>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-textDark bg-highlight py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Year 11 – Year 12 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
+            <span class="text-4xl mb-2">🎓</span>
+            <div class="font-bold text-lg text-textDark">Year 11 – Year 12</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+              <li class="flex items-center gap-2">✓ Mathematics</li>
+              <li class="flex items-center gap-2">✓ Science</li>
+              <li class="flex items-center gap-2">✓ Subject-Specific Support</li>
+              <li class="flex items-center gap-2">✓ Exam Preparation</li>
+              <li class="flex items-center gap-2">✓ Exam-Style Practice</li>
+              <li class="flex items-center gap-2">✓ Revision & Study Strategies</li>
+            </ul>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-textDark bg-highlight py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Targeted Prep Programs -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
+            <span class="text-4xl mb-2">🎯</span>
+            <div class="font-bold text-lg text-textDark">Targeted Prep</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <ul class="space-y-2 text-sm text-slate-600 mb-6">
+              <li class="flex items-center gap-2">✓ NAPLAN Preparation</li>
+              <li class="flex items-center gap-2">✓ Selective Entry Support</li>
+              <li class="flex items-center gap-2">✓ Scholarship Preparation</li>
+              <li class="flex items-center gap-2">✓ Exam-Style Practice</li>
+              <li class="flex items-center gap-2">✓ Timed Revision Drills</li>
+            </ul>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-textDark bg-highlight py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
           </div>
         </div>
 
       </div>
     </div>
+
+    <!-- Why Our Programs Section -->
+    <div class="mt-12 bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-100">
+      <h3 class="text-xl font-bold text-textDark text-center mb-6">Why Our Programs?</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-slate-700">
+        <div class="flex items-center gap-2">✨ Personalised attention</div>
+        <div class="flex items-center gap-2">👥 Small class sizes</div>
+        <div class="flex items-center gap-2">📋 Structured learning</div>
+        <div class="flex items-center gap-2">🎯 Targeted practice</div>
+        <div class="flex items-center gap-2">💡 Clear explanations</div>
+        <div class="flex items-center gap-2">🔄 Regular revision</div>
+        <div class="flex items-center gap-2">🌟 Confidence-building</div>
+        <div class="flex items-center gap-2">📈 Academic growth</div>
+      </div>
+    </div>
+
   </div>
 </section>
 

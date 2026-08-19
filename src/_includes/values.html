@@ -5,8 +5,8 @@
     <div class="mb-6 sm:mb-8 border-b border-slate-200/80 pb-4">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <h2 class="text-3xl font-black text-textDark">Our Core Values</h2>
-          <p class="text-slate-600 mt-2">The foundational principles behind our tutoring approach</p>
+          <h2 class="text-3xl font-black text-textDark">Our Teaching Philosophy</h2>
+          <p class="text-slate-600 mt-2">Beyond homework help — building concepts, skills, and a positive attitude</p>
         </div>
         <span class="hidden md:inline text-xs font-bold uppercase tracking-wider text-primary whitespace-nowrap">
           Student-Centered Excellence
@@ -35,41 +35,63 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
       </button>
 
-      <!-- Values Grid / Slider Container -->
+      <!-- Values Grid / Slider Container (Updated to support 5 cards cleanly) -->
       <div 
         id="values-slider" 
-        class="flex md:grid md:grid-cols-3 gap-6 sm:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
+        class="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
         
-        <!-- Card 1 -->
-        <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
-          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 shrink-0">
+        <!-- Card 1: Personalised Attention -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+          <div class="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-4 shrink-0">
             🎯
           </div>
-          <h3 class="font-bold text-lg text-textDark">Tailored Approach</h3>
-          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-            Customized roadmap models adjusting instantly to clear benchmarks and individual learning paces.
+          <h3 class="font-bold text-base text-textDark">Personalised Attention</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            Every student receives guidance tailored precisely to their individual learning needs and goals.
           </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
-          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 shrink-0">
+        <!-- Card 2: Experienced & Dedicated Teaching -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+          <div class="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-4 shrink-0">
             🎓
           </div>
-          <h3 class="font-bold text-lg text-textDark">Expert Mentorship</h3>
-          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-            Dedicated educators directing focused learning outcomes meticulously to build lasting confidence.
+          <h3 class="font-bold text-base text-textDark">Experienced Teaching</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            Focused on delivering clear explanations and effective learning strategies for lasting retention.
           </p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
-          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-6 shrink-0">
+        <!-- Card 3: Small Learning Groups -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+          <div class="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-4 shrink-0">
+            👥
+          </div>
+          <h3 class="font-bold text-base text-textDark">Small Learning Groups</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            A supportive environment where students ask questions freely, participate actively, and build confidence.
+          </p>
+        </div>
+
+        <!-- Card 4: Progress-Focused Approach -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+          <div class="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-4 shrink-0">
+            📈
+          </div>
+          <h3 class="font-bold text-base text-textDark">Progress-Focused</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            We regularly monitor student development and pinpoint specific areas for continuous improvement.
+          </p>
+        </div>
+
+        <!-- Card 5: Building Confidence -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border md:col-span-3 lg:col-span-1">
+          <div class="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl font-bold mb-4 shrink-0">
             ✨
           </div>
-          <h3 class="font-bold text-lg text-textDark">Inspiring Environment</h3>
-          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-            Comfortable physical and virtual facilities promoting creative thinking and deep academic focus.
+          <h3 class="font-bold text-base text-textDark">Building Confidence</h3>
+          <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+            Developing self-assurance, discipline, and a genuine, lifelong enthusiasm for learning.
           </p>
         </div>
 
