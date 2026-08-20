@@ -1,4 +1,4 @@
-<section id="services" class="scroll-mt-20 py-10 sm:py-14 bg-bgWarmLight px-6">
+<section id="services" class="scroll-mt-20 py-10 sm:py-14 bg-bgWarmLight px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
     
     <!-- Section Header -->
@@ -15,14 +15,14 @@
     </div>
 
     <!-- Wrapper with Relative Positioning -->
-    <div class="relative max-w-sm mx-auto md:max-w-none px-8 sm:px-12 md:px-0">
+    <div class="relative max-w-full mx-auto md:max-w-none px-0 sm:px-2 md:px-0">
       
       <!-- Previous Arrow (Mobile Only) -->
       <button 
         type="button" 
         id="slider-prev" 
         aria-label="Previous slide"
-        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
+        class="absolute -left-1 sm:left-1 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
       </button>
 
@@ -31,17 +31,17 @@
         type="button" 
         id="slider-next" 
         aria-label="Next slide"
-        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
+        class="absolute -right-1 sm:right-1 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
       </button>
 
       <!-- Cards Container (4-column grid on desktop) -->
       <div 
         id="programs-slider" 
-        class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
+        class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0 px-8 sm:px-12 md:px-0">
         
         <!-- Card 1: Prep – Year 6 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
           <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
             <span class="text-4xl mb-2">📚</span>
             <div class="font-bold text-lg text-textDark">Prep – Year 6</div>
@@ -60,7 +60,7 @@
         </div>
 
         <!-- Card 2: Year 7 – Year 10 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
           <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
             <span class="text-4xl mb-2">📐</span>
             <div class="font-bold text-lg text-textDark">Year 7 – Year 10</div>
@@ -80,7 +80,7 @@
         </div>
 
         <!-- Card 3: Year 11 – Year 12 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
           <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
             <span class="text-4xl mb-2">🎓</span>
             <div class="font-bold text-lg text-textDark">Year 11 – Year 12</div>
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Card 4: Targeted Prep Programs -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-full md:min-w-0 snap-center shrink-0 flex flex-col">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
           <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
             <span class="text-4xl mb-2">🎯</span>
             <div class="font-bold text-lg text-textDark">Targeted Prep</div>
@@ -119,21 +119,6 @@
       </div>
     </div>
 
-    <!-- Why Our Programs Section 
-    <div class="mt-12 bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-100">
-      <h3 class="text-xl font-bold text-textDark text-center mb-6">Why Our Programs?</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-slate-700">
-        <div class="flex items-center gap-2">✨ Personalised attention</div>
-        <div class="flex items-center gap-2">👥 Small class sizes</div>
-        <div class="flex items-center gap-2">📋 Structured learning</div>
-        <div class="flex items-center gap-2">🎯 Targeted practice</div>
-        <div class="flex items-center gap-2">💡 Clear explanations</div>
-        <div class="flex items-center gap-2">🔄 Regular revision</div>
-        <div class="flex items-center gap-2">🌟 Confidence-building</div>
-        <div class="flex items-center gap-2">📈 Academic growth</div>
-      </div>
-    </div>
--->
   </div>
 </section>
 
@@ -144,14 +129,40 @@
     const nextBtn = document.getElementById('slider-next');
 
     if (slider && prevBtn && nextBtn) {
+      const cards = slider.querySelectorAll(':scope > div');
+
+      const scrollNext = () => {
+        // Only auto-rotate if in mobile view (< 768px)
+        if (window.innerWidth >= 768) return;
+
+        const cardWidth = cards[0].clientWidth + 16;
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+        if (slider.scrollLeft >= maxScrollLeft - 10) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+      };
+
       prevBtn.addEventListener('click', () => {
-        const cardWidth = slider.querySelector(':scope > div').clientWidth;
+        const cardWidth = cards[0].clientWidth + 16;
         slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
       });
 
       nextBtn.addEventListener('click', () => {
-        const cardWidth = slider.querySelector(':scope > div').clientWidth;
+        const cardWidth = cards[0].clientWidth + 16;
         slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      });
+
+      // Auto-rotate every 4 seconds
+      let autoScrollTimer = setInterval(scrollNext, 4000);
+
+      // Pause auto-rotation on user interaction
+      ['touchstart', 'mouseenter', 'click'].forEach(eventType => {
+        slider.addEventListener(eventType, () => {
+          clearInterval(autoScrollTimer);
+        }, { passive: true });
       });
     }
   });

@@ -1,6 +1,6 @@
-<section id="values" class="scroll-mt-20 py-6 sm:py-8 bg-bgWarmLight px-6">
+<section id="values" class="scroll-mt-20 py-6 sm:py-8 bg-bgWarmLight px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
-    
+
     <!-- Standardized Section Header -->
     <div class="mb-6 sm:mb-8 border-b border-slate-200/80 pb-4">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -15,14 +15,14 @@
     </div>
 
     <!-- Wrapper with Relative Positioning -->
-    <div class="relative max-w-sm mx-auto md:max-w-none px-8 sm:px-12 md:px-0">
-      
+    <div class="relative max-w-full mx-auto md:max-w-none px-0 sm:px-2 md:px-0">
+
       <!-- Previous Arrow -->
       <button 
         type="button" 
         id="values-prev" 
         aria-label="Previous value"
-        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
+        class="absolute -left-1 sm:left-1 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
       </button>
 
@@ -31,17 +31,17 @@
         type="button" 
         id="values-next" 
         aria-label="Next value"
-        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
+        class="absolute -right-1 sm:right-1 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-[#62ab1b] text-white shadow-md hover:brightness-95 active:scale-95 transition-all md:hidden">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
       </button>
 
       <!-- Values Grid / Slider Container -->
       <div 
         id="values-slider" 
-        class="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
-        
+        class="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0 px-8 sm:px-12 md:px-0">
+
         <!-- Card 1: Personalised Attention -->
-        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 box-border">
           <div class="w-16 h-16 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-primary mb-4 shrink-0 shadow-sm">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="9" stroke="currentColor"></circle>
@@ -56,7 +56,7 @@
         </div>
 
         <!-- Card 2: Experienced Teaching -->
-        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 box-border">
           <div class="w-16 h-16 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-primary mb-4 shrink-0 shadow-sm">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path>
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Card 3: Small Learning Groups -->
-        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 box-border">
           <div class="w-16 h-16 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-primary mb-4 shrink-0 shadow-sm">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -85,7 +85,7 @@
         </div>
 
         <!-- Card 4: Progress-Focused Approach -->
-        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 box-border">
           <div class="w-16 h-16 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-primary mb-4 shrink-0 shadow-sm">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Card 5: Building Confidence -->
-        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-full md:min-w-0 snap-center shrink-0 box-border md:col-span-3 lg:col-span-1">
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow w-full md:w-auto min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 box-border md:col-span-3 lg:col-span-1">
           <div class="w-16 h-16 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-primary mb-4 shrink-0 shadow-sm">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
@@ -125,14 +125,42 @@
     const valuesNextBtn = document.getElementById('values-next');
 
     if (valuesSlider && valuesPrevBtn && valuesNextBtn) {
+      const cards = valuesSlider.querySelectorAll(':scope > div');
+
+      const scrollNext = () => {
+        // Only auto-rotate if we are in mobile view (md breakpoint is 768px)
+        if (window.innerWidth >= 768) return;
+
+        const cardWidth = cards[0].clientWidth + 16; // accounting for gap approximate or exact scroll
+        const maxScrollLeft = valuesSlider.scrollWidth - valuesSlider.clientWidth;
+
+        if (valuesSlider.scrollLeft >= maxScrollLeft - 10) {
+          // Loop back to start smoothly
+          valuesSlider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          valuesSlider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+      };
+
+      // Manual Navigation Buttons
       valuesPrevBtn.addEventListener('click', () => {
-        const cardWidth = valuesSlider.querySelector(':scope > div').clientWidth;
+        const cardWidth = cards[0].clientWidth + 16;
         valuesSlider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
       });
 
       valuesNextBtn.addEventListener('click', () => {
-        const cardWidth = valuesSlider.querySelector(':scope > div').clientWidth;
+        const cardWidth = cards[0].clientWidth + 16;
         valuesSlider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      });
+
+      // Auto-rotate every 4 seconds in mobile view
+      let autoScrollTimer = setInterval(scrollNext, 4000);
+
+      // Pause auto-rotation when user interacts or touches the slider
+      ['touchstart', 'mouseenter', 'click'].forEach(eventType => {
+        valuesSlider.addEventListener(eventType, () => {
+          clearInterval(autoScrollTimer);
+        }, { passive: true });
       });
     }
   });
