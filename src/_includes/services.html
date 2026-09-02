@@ -5,10 +5,10 @@
     <div class="mb-8 sm:mb-12 border-b border-slate-200/80 pb-4">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <h2 class="text-3xl font-black text-textDark">Our Programs</h2>
-          <p class="text-slate-600 mt-1">Structured, curriculum-aligned academic support from Prep to Year 12</p>
+          <h2 data-i18n="header.title" class="text-3xl font-black text-textDark">Our Programs</h2>
+          <p data-i18n="header.subtitle" class="text-slate-600 mt-1">Structured, curriculum-aligned academic support from Prep to Year 12</p>
         </div>
-        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-primary hover:opacity-80 transition-opacity whitespace-nowrap">
+        <a href="#contact" data-i18n="header.cta" class="text-xs font-bold uppercase tracking-wider text-primary hover:opacity-80 transition-opacity whitespace-nowrap">
           Enquire Now &rarr;
         </a>
       </div>
@@ -38,81 +38,61 @@
       <!-- Cards Container (4-column grid on desktop) -->
       <div 
         id="programs-slider" 
-        class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0 px-8 sm:px-12 md:px-0">
+        class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 md:pb-0 px-8 sm:px-12 md:px-0 items-stretch">
         
-        <!-- Card 1: Prep – Year 6 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
-          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
-            <span class="text-4xl mb-2">📚</span>
-            <div class="font-bold text-lg text-textDark">Prep – Year 6</div>
+        <!-- Card 1 -->
+        <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border group transition-all duration-300 hover:-translate-y-1" data-program-index="0">
+          <div class="relative h-48 w-full overflow-hidden bg-slate-100">
+            <img src="" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-img">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
-            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-              <li class="flex items-center gap-2">✓ English & Literacy</li>
-              <li class="flex items-center gap-2">✓ Mathematics & Numeracy</li>
-              <li class="flex items-center gap-2">✓ Science</li>
-              <li class="flex items-center gap-2">✓ Homework & Learning Support</li>
-              <li class="flex items-center gap-2">✓ Foundational Skills</li>
-              <li class="flex items-center gap-2">✓ Confidence & Study Skills</li>
-            </ul>
-            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
+            <div>
+              <h3 class="font-bold text-xl text-textDark mb-2 card-title"></h3>
+              <p class="text-sm text-slate-600 mb-6 card-subtitle"></p>
+            </div>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all card-cta">Enquire Now</a>
           </div>
         </div>
 
-        <!-- Card 2: Year 7 – Year 10 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
-          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
-            <span class="text-4xl mb-2">📐</span>
-            <div class="font-bold text-lg text-textDark">Year 7 – Year 10</div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border group transition-all duration-300 hover:-translate-y-1" data-program-index="1">
+          <div class="relative h-48 w-full overflow-hidden bg-slate-100">
+            <img src="" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-img">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
-            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-              <li class="flex items-center gap-2">✓ Mathematics</li>
-              <li class="flex items-center gap-2">✓ Science</li>
-              <li class="flex items-center gap-2">✓ English</li>
-              <li class="flex items-center gap-2">✓ Homework & Academic Support</li>
-              <li class="flex items-center gap-2">✓ Exam Preparation</li>
-              <li class="flex items-center gap-2">✓ Exam-Style Practice</li>
-              <li class="flex items-center gap-2">✓ Study & Learning Strategies</li>
-            </ul>
-            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
+            <div>
+              <h3 class="font-bold text-xl text-textDark mb-2 card-title"></h3>
+              <p class="text-sm text-slate-600 mb-6 card-subtitle"></p>
+            </div>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all card-cta">Enquire Now</a>
           </div>
         </div>
 
-        <!-- Card 3: Year 11 – Year 12 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
-          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
-            <span class="text-4xl mb-2">🎓</span>
-            <div class="font-bold text-lg text-textDark">Year 11 – Year 12</div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border group transition-all duration-300 hover:-translate-y-1" data-program-index="2">
+          <div class="relative h-48 w-full overflow-hidden bg-slate-100">
+            <img src="" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-img">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
-            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-              <li class="flex items-center gap-2">✓ Mathematics</li>
-              <li class="flex items-center gap-2">✓ Science</li>
-              <li class="flex items-center gap-2">✓ Subject-Specific Support</li>
-              <li class="flex items-center gap-2">✓ Exam Preparation</li>
-              <li class="flex items-center gap-2">✓ Exam-Style Practice</li>
-              <li class="flex items-center gap-2">✓ Revision & Study Strategies</li>
-            </ul>
-            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
+            <div>
+              <h3 class="font-bold text-xl text-textDark mb-2 card-title"></h3>
+              <p class="text-sm text-slate-600 mb-6 card-subtitle"></p>
+            </div>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all card-cta">Enquire Now</a>
           </div>
         </div>
 
-        <!-- Card 4: Targeted Prep Programs -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border">
-          <div class="bg-primary/5 p-6 text-center flex flex-col items-center justify-center border-b border-slate-100">
-            <span class="text-4xl mb-2">🎯</span>
-            <div class="font-bold text-lg text-textDark">Targeted Prep</div>
+        <!-- Card 4 -->
+        <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-center shrink-0 flex flex-col box-border group transition-all duration-300 hover:-translate-y-1" data-program-index="3">
+          <div class="relative h-48 w-full overflow-hidden bg-slate-100">
+            <img src="" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-img">
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
-            <ul class="space-y-2 text-sm text-slate-600 mb-6">
-              <li class="flex items-center gap-2">✓ NAPLAN Preparation</li>
-              <li class="flex items-center gap-2">✓ Selective Entry Support</li>
-              <li class="flex items-center gap-2">✓ Scholarship Preparation</li>
-              <li class="flex items-center gap-2">✓ Exam-Style Practice</li>
-              <li class="flex items-center gap-2">✓ Timed Revision Drills</li>
-            </ul>
-            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all">Enquire Now</a>
+            <div>
+              <h3 class="font-bold text-xl text-textDark mb-2 card-title"></h3>
+              <p class="text-sm text-slate-600 mb-6 card-subtitle"></p>
+            </div>
+            <a href="#contact" class="block w-full text-center text-xs font-extrabold uppercase text-white bg-[#62ab1b] py-3 rounded-xl shadow-sm hover:brightness-95 transition-all card-cta">Enquire Now</a>
           </div>
         </div>
 
@@ -123,7 +103,75 @@
 </section>
 
 <script>
+  // Central dictionary containing all localized text and Unsplash copyright-free image URLs
+  const translations = {
+    en: {
+      header: {
+        title: "Our Programs",
+        subtitle: "Structured, curriculum-aligned academic support from Prep to Year 12",
+        cta: "Enquire Now →"
+      },
+      programs: [
+        {
+          image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+          title: "Primary School Tutoring",
+          subtitle: "Supporting students from Year 1–6 to build strong literacy and numeracy foundations.",
+          ctaText: "Enquire Now"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80",
+          title: "Junior High Support",
+          subtitle: "Targeted guidance through Year 7–10 mathematics, science, and study habits.",
+          ctaText: "Enquire Now"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+          title: "Senior Secondary Mastery",
+          subtitle: "Advanced subject-specific tutoring and exam strategies for Year 11 and 12 success.",
+          ctaText: "Enquire Now"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+          title: "Targeted Prep",
+          subtitle: "Specialized drills and practice for NAPLAN, selective entry, and scholarship exams.",
+          ctaText: "Enquire Now"
+        }
+      ]
+    }
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
+    const lang = translations.en;
+
+    // 1. Populate header text elements safely from the dictionary
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const keys = el.getAttribute('data-i18n').split('.');
+      let val = lang;
+      keys.forEach(k => val = val ? val[k] : null);
+      if (val) el.innerHTML = val;
+    });
+
+    // 2. Populate card content dynamically into the static HTML wrappers
+    document.querySelectorAll('[data-program-index]').forEach(cardEl => {
+      const index = cardEl.getAttribute('data-program-index');
+      const data = lang.programs[index];
+      if (!data) return;
+
+      const imgEl = cardEl.querySelector('.card-img');
+      const titleEl = cardEl.querySelector('.card-title');
+      const subtitleEl = cardEl.querySelector('.card-subtitle');
+      const ctaEl = cardEl.querySelector('.card-cta');
+
+      if (imgEl) {
+        imgEl.src = data.image;
+        imgEl.alt = data.title;
+      }
+      if (titleEl) titleEl.textContent = data.title;
+      if (subtitleEl) subtitleEl.textContent = data.subtitle;
+      if (ctaEl) ctaEl.textContent = data.ctaText;
+    });
+
+    // 3. Slider Navigation & Auto-Rotation Logic
     const slider = document.getElementById('programs-slider');
     const prevBtn = document.getElementById('slider-prev');
     const nextBtn = document.getElementById('slider-next');
@@ -132,10 +180,9 @@
       const cards = slider.querySelectorAll(':scope > div');
 
       const scrollNext = () => {
-        // Only auto-rotate if in mobile view (< 768px)
-        if (window.innerWidth >= 768) return;
+        if (window.innerWidth >= 768) return; // Mobile view only
 
-        const cardWidth = cards[0].clientWidth + 16;
+        const cardWidth = cards[0].clientWidth + 24;
         const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
 
         if (slider.scrollLeft >= maxScrollLeft - 10) {
@@ -146,16 +193,16 @@
       };
 
       prevBtn.addEventListener('click', () => {
-        const cardWidth = cards[0].clientWidth + 16;
+        const cardWidth = cards[0].clientWidth + 24;
         slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
       });
 
       nextBtn.addEventListener('click', () => {
-        const cardWidth = cards[0].clientWidth + 16;
+        const cardWidth = cards[0].clientWidth + 24;
         slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
       });
 
-      // Auto-rotate every 4 seconds
+      // Auto-rotate every 4 seconds on mobile
       let autoScrollTimer = setInterval(scrollNext, 4000);
 
       // Pause auto-rotation on user interaction
