@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>{{ title | default: "NiNi's Academy - Tailored Learning" }}</title>
   <meta name="description" content="{{ description | default: "Professional tutoring and academic support." }}">
-  
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL (Instructs Google to index ninisacademy.au as primary) -->
+  <link rel="canonical" href="https://ninisacademy.au/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ninisacademy.au/">
+  <meta property="og:title" content="{{ title | default: "NiNi's Academy - Tailored Learning" }}">
+  <meta property="og:description" content="{{ description | default: "Professional tutoring and academic support." }}">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | default: "NiNi's Academy - Tailored Learning" }}">
+  <meta name="twitter:description" content="{{ description | default: "Professional tutoring and academic support." }}">
+
   <!-- Favicon Links -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Structured Data (JSON-LD) for Local/Educational SEO -->
   <script type="application/ld+json">
@@ -27,7 +43,7 @@
       "addressCountry": "AU"
     },
     "telephone": "+61415966424",
-    "url": "https://joemarshalmathew.github.io/project-vidya/"
+    "url": "https://ninisacademy.au/"
   }
   </script>
 
@@ -38,9 +54,9 @@
       theme: {
         extend: {
           colors: {
-            primary: '#0b1a38',    /* Dark Blue (blue-950) */
-            secondary: '#1e3a8a',  /* Medium Dark Blue (blue-900) */
-            highlight: '#f59e0b',  /* Amber Gold */
+            primary: '#0b1a38',     /* Dark Blue (blue-950) */
+            secondary: '#1e3a8a',   /* Medium Dark Blue (blue-900) */
+            highlight: '#f59e0b',   /* Amber Gold */
             bgWarmLight: '#fdfbf7',
             textDark: '#0f172a',
           }
