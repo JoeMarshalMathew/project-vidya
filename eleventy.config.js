@@ -16,6 +16,8 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/android-chrome-192x192.png": "android-chrome-192x192.png" });
   eleventyConfig.addPassthroughCopy({ "src/android-chrome-512x512.png": "android-chrome-512x512.png" });
   eleventyConfig.addPassthroughCopy({ "src/site.webmanifest": "site.webmanifest" });
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/sitemap.xml": "sitemap.xml" });
 
   // Dynamically set pathPrefix based on environment
   const isProduction = process.env.NODE_ENV === "production";
