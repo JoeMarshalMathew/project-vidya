@@ -23,7 +23,8 @@ export default function(eleventyConfig) {
   const isProduction = process.env.NODE_ENV === "production";
 
   return {
-    pathPrefix: isProduction ? "/project-vidya/" : "/",
+    //pathPrefix: isProduction ? "/project-vidya/" : "/",
+    pathPrefix: "/",
     dir: {
       input: "src",
       output: "_site"
